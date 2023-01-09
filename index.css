@@ -15,14 +15,14 @@ body {
 header {
   width: 100%;
   background-color: antiquewhite;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 button {
-  margin: 20px 0;
+  margin: 15px 0;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif !important;
   margin-left: 10px;
@@ -36,7 +36,7 @@ button {
 }
 
 input {
-  margin: 20px 0;
+  margin: 15px 0;
   width: 27%;
   height: 25px;
   padding: 10px;
@@ -73,7 +73,7 @@ input:focus {
   padding: 20px;
   border-radius: 5px;
   background-color: antiquewhite;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 #title {
@@ -94,4 +94,15 @@ input:focus {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   color: rgb(77, 77, 77);
+}
+
+@media (max-width: 768px) {
+  input,button {
+    margin: 10px 0;
+  }
+  input {
+    width: 60%;
+    margin-right: 10px;
+    font-size: 15px;
+  }
 }

@@ -12,6 +12,12 @@ function inner(x, y, z,w) {
   tempLike.innerHTML = `Ощущается: ${Math.round(z)}`
 }
 
+(async function geolocation() {
+  let url = 'http://api.sypexgeo.net/json/';
+  let response = await fetch(url); 
+  let commits = await response.json();
+  serach(commits.city.name_ru)
+})()
 const serach = (text = "Новосибирск") => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=04a1b7f761ab67677def7fac6c96a829`)
   .then((obj) => {
